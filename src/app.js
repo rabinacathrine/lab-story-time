@@ -39,3 +39,87 @@
 //Take all of Lily's strategies and concatenate them to a single var
 //Seperate the strategies by a single space
 //Return the length of the complete strategy
+function moreAboutHome(address, distanceFromTown, hasNeighbours){
+    return typeof(address)+typeof(distanceFromTown)+typeof(hasNeighbours);
+   //console.log(typeof(address));
+   }
+   
+   function moreAboutKaren(parents, noOfSiblings, isNuclearFamily){
+       // var s=typeof(parents)+typeof(noOfSiblings)+typeof(isNuclearFamily);
+       // if(parents==typeof(parents))
+       if((typeof(parents)==="String") && (typeof(noOfSiblings)==="number") && (typeof(isNuclearFamily)==="boolean")){
+           return true;
+       }
+       else{
+           return false;
+       }
+       // return typeof parents+noOfSiblings+isNuclearFamily === 'string' || 'number' ||'Boolean';
+   }
+   /* PROGRESSION 3*/
+   function doesFriendExist(ageInText, ageInNumber){
+   // if(typeof(ageInText)==isNaN(ageInText)){
+   //     return ageInText;
+   // }
+   // else if (typeof(ageInNumber)==isNan(ageInNumber)) {
+   //     return ageInNumber;
+   // } else {
+   //     return 0;
+   // }
+   if (typeof(ageInText)==isNaN){
+       return ageInText;
+   }
+   else{
+   return ageInNumber;
+   }
+   }
+   //Progression 4
+   function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel){
+       if(typeof(totalNoOfSweets)&&typeof(sweetsConsumedByKaren)&&typeof(sweetsConsumedInNMeters)&&typeof(metersToTravel)!="number"){
+           return "No sweets for karen's friend";
+       }
+       else if(sweetsConsumedByKaren==0){
+           return 0;
+       }
+       else if(isNaN){
+           return 0;
+       }
+   }
+   
+   function convertToCelsius(fahrenheit){
+       if(typeof(fahrenheit)==="number"){
+       return (5/9) * (fahrenheit-32);
+       }
+       else{
+           return 'Technical Error!';
+       }
+   }
+   
+   function aDifficultChoice(choice){
+       switch(choice){
+           case 1:
+               return "Take her to a doctor";
+               break;
+           case 2:
+               return "Talk her to huband about it";
+               break;
+           case 3:
+                   return "Counsel her daughter herself";
+                   break;
+           case 4:
+                   return "Lock her daughter in her room";
+                   break;
+           case -1:
+               return "Break down and giveup all hope ";
+               break;
+           case "I give up":
+               return "Refused to do anything for karen";
+               break;
+           default:
+               return "wasnt able to decide";
+           break;
+       }
+   }
+   
+   function consoleKaren(strategies){
+       return strategies.length;
+   }
