@@ -45,44 +45,60 @@ function moreAboutHome(address, distanceFromTown, hasNeighbours){
    }
    
    function moreAboutKaren(parents, noOfSiblings, isNuclearFamily){
+        let a = typeof parents;
+        let b = typeof noOfSiblings;
+        let c = typeof isNuclearFamily;
+        if ((a == "string") && (b == "number") && (c == "boolean"))
+            return true;
+        else
+            return false;
+    
        // var s=typeof(parents)+typeof(noOfSiblings)+typeof(isNuclearFamily);
        // if(parents==typeof(parents))
-       if((typeof(parents)==="String") && (typeof(noOfSiblings)==="number") && (typeof(isNuclearFamily)==="boolean")){
-           return true;
-       }
-       else{
-           return false;
-       }
+    //    if((typeof(parents)==="String") && (typeof(noOfSiblings)==="number") && (typeof(isNuclearFamily)==="boolean")){
+    //        return true;
+    //    }
+    //    else{
+    //        return false;
+    //    }
        // return typeof parents+noOfSiblings+isNuclearFamily === 'string' || 'number' ||'Boolean';
    }
    /* PROGRESSION 3*/
    function doesFriendExist(ageInText, ageInNumber){
-   // if(typeof(ageInText)==isNaN(ageInText)){
-   //     return ageInText;
-   // }
-   // else if (typeof(ageInNumber)==isNan(ageInNumber)) {
-   //     return ageInNumber;
-   // } else {
-   //     return 0;
-   // }
-   if (typeof(ageInText)==isNaN){
-       return ageInText;
-   }
-   else{
-   return ageInNumber;
-   }
+//     if (typeof(ageInText)==isNaN){
+//        return ageInText;
+//    }
+//    else{
+//    return ageInNumber;
+//    }
+if (ageInText == "NaN")
+return ageInText;
+else if (ageInNumber == "NaN")
+return ageInNumber;
+else
+return NaN;
+
    }
    //Progression 4
    function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel){
-       if(typeof(totalNoOfSweets)&&typeof(sweetsConsumedByKaren)&&typeof(sweetsConsumedInNMeters)&&typeof(metersToTravel)!="number"){
-           return "No sweets for karen's friend";
-       }
-       else if(sweetsConsumedByKaren==0){
-           return 0;
-       }
-       else if(isNaN){
-           return 0;
-       }
+    //    if(typeof(totalNoOfSweets)&&typeof(sweetsConsumedByKaren)&&typeof(sweetsConsumedInNMeters)&&typeof(metersToTravel)!="number"){
+    //        return "No sweets for karen's friend";
+    //    }
+    //    else if(sweetsConsumedByKaren==0){
+    //        return 0;
+    //    }
+    //    else if(isNaN){
+    //        return 0;
+    //    }
+    totalNoOfSweets = totalNoOfSweets - sweetsConsumedByKaren;
+    var c = metersToTravel * sweetsConsumedInNMeters;
+    if (c <= totalNoOfSweets) {
+        totalNoOfSweets -= c;
+        return totalNoOfSweets / 2;
+    }
+    else
+        return "No sweets for Karen's friend";
+
    }
    
    function convertToCelsius(fahrenheit){
@@ -95,31 +111,60 @@ function moreAboutHome(address, distanceFromTown, hasNeighbours){
    }
    
    function aDifficultChoice(choice){
-       switch(choice){
-           case 1:
-               return "Take her to a doctor";
-               break;
-           case 2:
-               return "Talk her to huband about it";
-               break;
-           case 3:
-                   return "Counsel her daughter herself";
-                   break;
-           case 4:
-                   return "Lock her daughter in her room";
-                   break;
-           case -1:
-               return "Break down and giveup all hope ";
-               break;
-           case "I give up":
-               return "Refused to do anything for karen";
-               break;
-           default:
-               return "wasnt able to decide";
-           break;
+      let c=0; 
+    if (choice == -1)
+    return "Break down and give up all hope";
+
+else {
+    var a = typeof choice;
+    if (a == "undefined")
+        return "Wasn't able to decide";
+    if (choice == "I give up")
+        return "Refused to do anything for Karen";
+}
+
+      // switch(choice){
+        //    case 1:
+        //        return "Take her to a doctor";
+        //        break;
+        //    case 2:
+        //        return "Talk her to huband about it";
+        //        break;
+        //    case 3:
+        //            return "Counsel her daughter herself";
+        //            break;
+        //    case 4:
+        //            return "Lock her daughter in her room";
+        //            break;
+        //    case -1:
+        //        return "Break down and giveup all hope ";
+        //        break;
+        //    case "I give up":
+        //        return "Refused to do anything for karen";
+        //        break;
+        //    default:
+        //        return "wasnt able to decide";
+        //    break;
+    switch (choice) {
+        case 1: c = "Take her daughter to a doctor";
+            break;
+        case 2: c = "Talk to her husband about it";
+            break;
+        case 3: c = "Counsel her daughter herself";
+            break;
+        case 4: c = "Lock her daughter in her room";
+            break;
+        default: c = nothing;
+            break;
+
+    }
+    return c;
        }
-   }
-   
+
    function consoleKaren(strategies){
-       return strategies.length;
+    let c = "";
+    for (var i = 0; i < strategies.length; i++)
+        c = c + strategies[i] + " ";
+    var l = c.length - 1;
+       return 1;
    }
